@@ -19,10 +19,11 @@ class ChatClient {
             }
         });
         global.chatClient = this;
+        this.toggleDarkMode();
+        this.toggleBorder();
     }
 
     // TODO: Break out many of these GameControls into separate classes.
-
     registerFunctions() {
         var self = this;
         this.registerCommand('ping', 'Check your latency.', function () {
